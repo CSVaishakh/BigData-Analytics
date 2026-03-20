@@ -1,4 +1,6 @@
-numbers <- c(22,1,54,20,22,14,1,78,65,31,1,3,1,2)
+cat("Enter numbers separated by spaces: ")
+input <- readLines(con = stdin(), n = 1)
+numbers <- as.numeric(strsplit(trimws(input), "\\s+")[[1]])
 n <- length(numbers)
 
 sum_val <- 0
